@@ -3,4 +3,4 @@
 
 ## What is this ?
 
-An AI anchor for hosting TinkerHub events using openai's assistant API, whisper and TTS APIs
+An AI anchor for hosting events using openai's assistant API, whisper and TTS APIs
