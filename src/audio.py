@@ -4,6 +4,7 @@ import numpy as np
 import keyboard
 from vision import has_speaker_left_stage
 import scipy.io.wavfile as wav
+import cv2
 
 
 def speak(text, client: OpenAI):
@@ -80,7 +81,7 @@ def record_speech_vision(fs=44100):
     return filename
 
 
-def speech_to_text(filename, client: OpenAI):
+def transcribe(filename, client: OpenAI):
     # Open the audio file in binary mode
     with open(filename, 'rb') as audio_file:
         # Convert the audio file to text using OpenAI's Whisper ASR API
