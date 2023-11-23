@@ -53,14 +53,14 @@ Assistant : Thank you <speaker> your thoughts on <summarized> was spot on!
 To generate and save a transcript, run the following command:
 
 ```bash
-python main.py generate yourpdffile
+python src/main.py generate yourpdffile
 ```
 
 
 To start an event, run the following command:
 
 ```bash
-python main.py start yourpdffile
+python src/main.py start yourpdffile
 ```
 
 Replace `yourpdffile` with the filename of PDF in `/pdfs` directory. This pdf should contain event details and speaker details.
