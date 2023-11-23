@@ -27,3 +27,40 @@ Assistant : Thank you <speaker> your thoughts on <summarized> was spot on!
 <Assistant calling next speaker and activate listen mode>
 ...
 ```
+
+## Installation
+
+1. Clone the repository:
+    ```
+    git clone https://github.com/tinkerhub/veena.git
+    ```
+2. Navigate to the project directory:
+    ```
+    cd veena
+    ```
+3. Install the required packages:
+    ```
+    pip install -r requirements.txt
+    ```
+4. Create a `.env` file in the `ops` directory and add your OpenAI API key:
+    ```
+    OPENAI_API_KEY=yourapikey
+    ```
+
+
+## Usage
+
+To generate and save a transcript, run the following command:
+
+```bash
+python main.py generate yourpdffile
+```
+
+
+To start an event, run the following command:
+
+```bash
+python main.py start yourpdffile
+```
+
+Replace `yourpdffile` with the filename of PDF in `/pdfs` directory. This pdf should contain event details and speaker details.
