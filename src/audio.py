@@ -5,6 +5,7 @@ import keyboard
 from vision import has_speaker_left_stage
 import scipy.io.wavfile as wav
 
+
 def speak(text, client: OpenAI):
     response = client.audio.speech.create(
         model="tts-1",
@@ -14,6 +15,7 @@ def speak(text, client: OpenAI):
 
     response.stream_to_file("audio/output.mp3")
 
+
 def record_speech(fs=44100):
     """
     This function records the speech of the speaker.
@@ -21,7 +23,7 @@ def record_speech(fs=44100):
     :return: The filename of the recorded speech.
     """
     print("Recording... Press 'q' to stop.")
-    
+
     # Start recording in a loop
     recording = []
     while True:
@@ -41,6 +43,7 @@ def record_speech(fs=44100):
     wav.write(filename, fs, np.int16(recording))
     print("Recording completed.")
     return filename
+
 
 def record_speech_vision(fs=44100):
     """
@@ -76,12 +79,13 @@ def record_speech_vision(fs=44100):
     print("Recording completed.")
     return filename
 
+
 def speech_to_text(filename, client: OpenAI):
     # Open the audio file in binary mode
     with open(filename, 'rb') as audio_file:
         # Convert the audio file to text using OpenAI's Whisper ASR API
         transcript = client.audio.transcriptions.create(
-            model="whisper-1", 
+            model="whisper-1",
             file=audio_file
         )
 

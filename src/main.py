@@ -18,7 +18,7 @@ def main():
     args = parser.parse_args()
 
     if args.command == 'generate':
-        ai.generate_transcript(args.pdf_file, client)
+        ai.generate_and_save_transcript(args.pdf_file, client)
     elif args.command == 'start':
         transcript = ai.load_transcript(args.pdf_file)
         for dialogue in transcript.split('\n\n'):

@@ -1,5 +1,19 @@
+from langchain.document_loaders import DirectoryLoader
 from openai import OpenAI
 import time
+
+
+def load_pdf_file(pdf_file):
+    loader = DirectoryLoader(
+        path="pdfs",
+        glob="*.pdf",
+    )
+
+    # Load the PDF file
+    document = loader.load(pdf_file)
+
+    return document
+
 
 def wait_on_run(run, thread, client: OpenAI):
     while run.status == "queued" or run.status == "in_progress":
@@ -10,8 +24,9 @@ def wait_on_run(run, thread, client: OpenAI):
         time.sleep(0.5)
     return run
 
+
 def generate_text_with_prompt(text, prompt, client: OpenAI):
-    
+
     # Create an assistant for custom text analysis based on the given prompt
     assistant = client.beta.assistants.create(
         name="Custom Text Analysis Assistant",

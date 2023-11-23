@@ -23,9 +23,12 @@ def convert_frame_to_image_data(frame):
     img_str = base64.b64encode(buffered.getvalue())
     return img_str.decode('ascii')
 
+
 def has_speaker_left_stage(frame, client: OpenAI):
     """
-    This function uses OpenAI's GPT-4 Vision model to analyze a video frame and determine if a speaker has left the stage.
+    This function uses OpenAI's GPT-4 Vision model to analyze a 
+    video frame and determine if a speaker has left the stage.
+    
     :param frame: The video frame to analyze.
     :param client: The OpenAI client.
     :return: True if the speaker has left the stage, False otherwise.
