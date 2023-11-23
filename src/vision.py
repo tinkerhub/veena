@@ -52,7 +52,7 @@ def has_speaker_left_stage(frame, client: OpenAI):
     )
 
     # Interpret the response from the OpenAI API
-    is_person_in_image = True if response.choices[0].text == "True" else False
+    is_person_left = False if response.choices[0].text == "True" else True
 
     # This is a placeholder and needs to be replaced with actual code to interpret the response
-    return is_person_in_image
+    return is_person_left
