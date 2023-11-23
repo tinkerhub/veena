@@ -3,3 +3,4 @@ sounddevice
 numpy
 langchain
 python-dotenv
+keyboard
