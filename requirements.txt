@@ -1,0 +1,4 @@
+openai
+sounddevice
+numpy
+langchain
