@@ -10,9 +10,9 @@ def load_pdf_file(pdf_file):
     )
 
     # Load the PDF file
-    document = loader.load(pdf_file)
-
-    return document
+    documents = loader.load(pdf_file)
+    content = "\n".join([doc.page_content for doc in documents])
+    return content
 
 
 def wait_on_run(run, thread, client: OpenAI):
