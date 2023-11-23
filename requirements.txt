@@ -2,3 +2,4 @@ openai
 sounddevice
 numpy
 langchain
+python-dotenv

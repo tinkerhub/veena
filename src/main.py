@@ -1,9 +1,15 @@
 import argparse
 import ai
+import os
 import audio
+import dotenv
 from openai import OpenAI
 
-client = OpenAI()
+dotenv.load_dotenv("ops/.env")
+
+client = OpenAI(
+    api_key=os.environ.get("OPENAI_API_KEY"),
+)
 
 def main():
     parser = argparse.ArgumentParser(description='AI Event Host')

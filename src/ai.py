@@ -1,11 +1,8 @@
 import os
-import openai
 from openai import OpenAI
 from utils import generate_text_with_prompt
 from langchain.document_loaders import DirectoryLoader
 
-
-openai.api_key = 'your-api-key'
 
 def generate_transcript(pdf_file, client: OpenAI):
     prompt = "Generate a full transcript for an event. \
