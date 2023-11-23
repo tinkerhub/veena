@@ -4,3 +4,4 @@ numpy
 langchain
 python-dotenv
 keyboard
+opencv-python
