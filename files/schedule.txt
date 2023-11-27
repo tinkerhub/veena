@@ -1,0 +1,7 @@
+Event 1. Welcome speech
+ Speaker: Saneem Perinkadakkat
+ Designetion: Board Member of Tinkerhub foundation, CEO and co-founder of Clusterdev.
+
+Event 2. Keynote address
+ Speaker: 	Abirami Sukumaran
+ Designetion: Developer Advocate in Google
