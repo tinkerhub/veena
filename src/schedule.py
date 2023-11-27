@@ -1,7 +1,7 @@
-from mistral import Mistral
+from model import GPTAgent
 
 ghost = "files/schedule.txt"
-mistral = Mistral(ghost)
+mistral = GPTAgent(ghost)
 
 
 def Schedule():
